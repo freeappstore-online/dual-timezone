@@ -1,0 +1,15 @@
+{
+  "name": "my-cool-app",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": { "node": ">=22" },
+  "pnpm": { "onlyBuiltDependencies": ["esbuild"] },
+  "repository": { "type": "git", "url": "git+https://github.com/freeappstore-online/my-cool-app.git" },
+  "scripts": {
+    "dev": "pnpm --filter @my-cool-app/web dev",
+    "build": "pnpm --filter @my-cool-app/web build",
+    "preview": "pnpm --filter @my-cool-app/web preview",
+    "typecheck": "pnpm --filter @my-cool-app/web exec tsc -b",
+    "test": "pnpm --filter @my-cool-app/web exec tsc -b"
+  }
+}

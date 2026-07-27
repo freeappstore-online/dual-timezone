@@ -1,15 +1,15 @@
-# my-cool-app
+# Dual Timezone
 
-A free app on FreeAppStore.
+A free, offline-first dual timezone meeting planner and clock manager.
 
-- Subdomain: `my-cool-app.freeappstore.online`
+See platform conventions in [SKILLS.md](https://raw.githubusercontent.com/freeappstore-online/freeappstore/main/SKILLS.md).
+
+- Subdomain: `dual-timezone.freeappstore.online`
 - Dev: `pnpm install && pnpm dev`
 - Build: `pnpm build`
 - Deploy: `git push origin main` (auto-deploys to R2 via GitHub Actions)
 
-Free, MIT-licensed, no tracking. For platform conventions, read
-https://freeappstore.online/skills.md
-before writing or changing anything.
+Free, MIT-licensed, no tracking. 
 
 ## SDK
 

@@ -1,4 +1,3 @@
-import { initApp } from "@freeappstore/sdk";
 import { CityCombobox } from "./components/CityCombobox";
 import { ClockPanel } from "./components/ClockPanel";
 import { MeetingForm } from "./components/MeetingForm";

@@ -5,7 +5,8 @@ import { MeetingForm } from "./components/MeetingForm";
 import { MeetingList } from "./components/MeetingList";
 import { useEffect, useState } from "react";
 import type { Meeting } from "./types";
-import { BuildInfo, Shell } from "@freeappstore/sdk/ui";
+import { BuildInfo } from "@freeappstore/sdk/ui";
+import Header from "./components/Navbar";
 
 export default function App() {
   const [homeCityId, setHomeCityId] = useState<string>("Asia/Jakarta");
@@ -14,8 +15,6 @@ export default function App() {
   ]);
   const [meetings, setMeetings] = useState<Meeting[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
-
-  const fas = initApp({ appId: "dual-timezone" });
 
   useEffect(() => {
     try {
@@ -83,8 +82,9 @@ export default function App() {
   if (!isLoaded) return null;
 
   return (
-    <Shell app={fas} appName="Dual Timezone">
-      <div className="min-h-svh bg-white text-slate-900 p-4 md:p-8 max-w-3xl mx-auto font-sans">
+    <>
+      <Header />
+      <div className="min-h-svh bg-white text-slate-900 p-4 md:p-8 max-w-xl mx-auto font-sans">
         <header className="mb-8 text-center sm:text-left">
           <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
             Dual Timezone
@@ -151,6 +151,6 @@ export default function App() {
         </footer>
       </div>
       <BuildInfo />
-    </Shell>
+    </>
   );
 }
